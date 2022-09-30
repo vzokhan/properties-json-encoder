@@ -22,5 +22,5 @@ class MyClass():
         return self._v
 
 print(json.dumps(MyClass('MyName', 13), cls=PropertyJSONEncoder))
-# {"name": "ClassName", "value": 13}
+# {"name": "MyName", "value": 13}
 ```
