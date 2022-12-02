@@ -1,6 +1,5 @@
 from enum import Enum
 from json import JSONEncoder
-from tkinter.font import names
 from typing import Any, Dict, Tuple, Type
 
 class PropertyJSONEncoder(JSONEncoder):
