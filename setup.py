@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='pje',
-      version='0.2',
+      version='0.3',
       description='Property Json Encoder',
       url='https://github.com/vzokhan/properties-json-encoder',
       author='Vladimir Zokhan',
