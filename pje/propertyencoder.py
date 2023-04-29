@@ -1,13 +1,16 @@
 from enum import Enum
+from uuid import UUID
 from json import JSONEncoder
-from typing import Any, Dict, Tuple, Type
+from typing import Dict, Tuple, Type
 
 class PropertyJSONEncoder(JSONEncoder):
     prop_cache : Dict[str, Tuple[Tuple[str, property]]] = {}
         
     def default(self, obj):
-        if(isinstance(obj, Enum)):
+        if isinstance(obj, Enum):
             return obj.name
+        elif isinstance(obj, UUID):
+            return str(obj)
         elif isinstance(obj, object):
             return PropertyJSONEncoder.__obj_to_dict(obj)
         else:
